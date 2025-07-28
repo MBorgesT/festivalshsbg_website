@@ -93,73 +93,6 @@ h3 {
 }
 
 
-/* ===== Media Queries (Desktop) ===== */
-@media (min-width: 768px) {
-    :root {
-        --text-base: 1.125rem;
-        /* 18px */
-        --heading-3: 1.5rem;
-        /* 24px */
-        --heading-2: 2rem;
-        /* 32px */
-        --heading-1: 2.5rem;
-        /* 40px */
-    }
-
-    section {
-        padding: 1rem 2rem;
-    }
-
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .column {
-        flex: 100%;
-        /* Each box takes full width */
-        min-width: 100%;
-        /* Override the min-width for mobile */
-    }
-
-    /* Restore desktop sizes for specific elements */
-    #text_1_1 {
-        font-size: 4.5rem;
-    }
-
-    #text_1_2 {
-        font-size: 1.1rem;
-    }
-
-    #text_2_1 {
-        font-size: 2rem;
-    }
-
-    .question {
-        font-size: 2.5rem;
-    }
-
-    .answer {
-        font-size: 1.8rem;
-    }
-
-    .form_button {
-        padding: 35px 50px;
-        font-size: 1.1rem;
-    }
-
-    /* Restore two-column layout for desktop */
-    .two-column {
-        flex-direction: row;
-    }
-
-    .column1,
-    .column2 {
-        min-width: 300px;
-        flex: 5 3;
-    }
-}
-
-
 /* ===== Header ===== */
 
 #site-title {
@@ -358,6 +291,7 @@ h3 {
 }
 
 
+
 /* ===== Fonts ===== */
 .instrument-serif-regular {
     font-family: "Instrument Serif", serif;
@@ -483,4 +417,76 @@ h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: italic;
+}
+
+
+
+
+
+
+
+/* ===== Media Queries (Desktop) ===== */
+@media (min-width: 768px) {
+    :root {
+        --text-base: 1.125rem;
+        /* 18px */
+        --heading-3: 1.5rem;
+        /* 24px */
+        --heading-2: 2rem;
+        /* 32px */
+        --heading-1: 2.5rem;
+        /* 40px */
+    }
+
+    section {
+        padding: 1rem 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column {
+        flex: 100%;
+        /* Each box takes full width */
+        min-width: 100%;
+        /* Override the min-width for mobile */
+    }
+
+    /* Restore desktop sizes for specific elements */
+    #text_1_1 {
+        font-size: 4.5rem;
+    }
+
+    #text_1_2 {
+        font-size: 1.35rem;
+    }
+
+    #text_2_1 {
+        font-size: 1.7rem;
+    }
+
+    .question {
+        font-size: 2.5rem;
+    }
+
+    .answer {
+        font-size: 1.5rem;
+    }
+
+    .form_button {
+        padding: 35px 50px;
+        font-size: 1.1rem;
+    }
+
+    /* Restore two-column layout for desktop */
+    .two-column {
+        flex-direction: row;
+    }
+
+    .column1,
+    .column2 {
+        min-width: 300px;
+        flex: 5 3;
+    }
 }
