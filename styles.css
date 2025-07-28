@@ -1,6 +1,6 @@
 /* ===== Base Styles (Mobile-First) ===== */
 :root {
-    --primary-color: #f06b2c;
+    --primary-color: #dd7240;
     /* Base orange */
     --dark-color: #7a3619;
     /* Darker shade (70% darker) */
@@ -27,33 +27,24 @@
 * {
     background-color: var(--primary-color);
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 /* ===== Layout ===== */
 
-body,
-header,
-main,
-footer,
-section {
-    padding: 0.5rem;
-}
 
 header {
     text-align: left;
     padding-bottom: 4rem;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 section {
     margin: 0 auto;
     max-width: 100%;
-}
-
-footer {
-    background: var(--dark-color);
-    color: white;
-    text-align: center;
 }
 
 /* ===== Navigation (No JS) ===== */
@@ -75,21 +66,6 @@ nav a {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-}
-
-/* ===== Typography ===== */
-/* Headers */
-
-h1 {
-    font-size: var(--heading-1);
-}
-
-h2 {
-    font-size: var(--heading-2);
-}
-
-h3 {
-    font-size: var(--heading-3);
 }
 
 
@@ -118,7 +94,7 @@ h3 {
 .column1 {
     flex: 5;
     min-width: 300px;
-    padding: 20px;
+    padding: 24px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -130,7 +106,7 @@ h3 {
 .column2 {
     flex: 3;
     min-width: 300px;
-    padding: 20px;
+    padding: 24px;
     box-sizing: border-box;
 }
 
@@ -145,7 +121,7 @@ h3 {
 
 #text_1_2 {
     font-family: Arial, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin: 0;
     /* Remove default margins that might affect alignment */
@@ -157,7 +133,7 @@ h3 {
     padding-top: 3rem;
     max-width: 850px;
     font-family: Arial, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin: 0;
     /* Remove default margins that might affect alignment */
@@ -166,6 +142,8 @@ h3 {
 }
 
 #about {
+    padding-right: 20px;
+    padding-left: 20px;
     margin-bottom: 3rem;
 }
 
@@ -193,6 +171,12 @@ h3 {
     max-width: 800px;
     padding-right: 2rem;
     padding-left: 2rem;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.question_block {
+    margin-bottom: 36px;
 }
 
 .question {
@@ -222,6 +206,8 @@ h3 {
 }
 
 .form_button {
+    margin-left: 28px;
+    margin-right: 28px;
     display: inline-block;
     padding: 35px 50px;
     background-color: var(--text-color);
@@ -290,6 +276,141 @@ h3 {
     /* Allows clicks to pass through to image */
 }
 
+footer {
+    background-color: var(--text-color); /* Dark background */
+    color: var(--primary-color); /* Orange text */
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    margin-top: 1.5rem !important;
+    opacity: 0.8;
+}
+
+footer {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    background-color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+.footer-text {
+    background-color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact {
+    background-color: var(--text-color);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+
+/* ===== Media Queries (Desktop) ===== */
+@media (min-width: 768px) {
+    :root {
+        --text-base: 1.125rem;
+        /* 18px */
+        --heading-3: 1.5rem;
+        /* 24px */
+        --heading-2: 2rem;
+        /* 32px */
+        --heading-1: 2.5rem;
+        /* 40px */
+    }
+
+    section {
+        padding: 1rem 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column {
+        flex: 100%;
+        /* Each box takes full width */
+        min-width: 100%;
+        /* Override the min-width for mobile */
+    }
+
+    /* Restore desktop sizes for specific elements */
+    #text_1_1 {
+        font-size: 4.5rem;
+    }
+
+    #text_1_2 {
+        font-size: 1.5rem;
+    }
+
+    #text_2_1 {
+        font-size: 1.7rem;
+        padding-left: 24px;
+    }
+
+    .question {
+        font-size: 2.5rem;
+    }
+
+    .answer {
+        font-size: 1.5rem;
+    }
+
+    .form_button {
+        padding: 35px 50px;
+        font-size: 1.1rem;
+    }
+
+    /* Restore two-column layout for desktop */
+    .two-column {
+        flex-direction: row;
+    }
+
+    .column1,
+    .column2 {
+        min-width: 300px;
+        flex: 5 3;
+    }
+
+    footer {
+        padding: 1rem 1rem;
+    }
+    
+    .footer-text {
+        font-size: 1.25rem;
+    }
+    
+    .footer-contact {
+        font-size: 1rem;
+    }
+}
 
 
 /* ===== Fonts ===== */
@@ -317,6 +438,102 @@ h3 {
     font-style: normal;
 }
 
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
 .poppins-extralight {
     font-family: "Poppins", sans-serif;
     font-weight: 200;
@@ -417,76 +634,4 @@ h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: italic;
-}
-
-
-
-
-
-
-
-/* ===== Media Queries (Desktop) ===== */
-@media (min-width: 768px) {
-    :root {
-        --text-base: 1.125rem;
-        /* 18px */
-        --heading-3: 1.5rem;
-        /* 24px */
-        --heading-2: 2rem;
-        /* 32px */
-        --heading-1: 2.5rem;
-        /* 40px */
-    }
-
-    section {
-        padding: 1rem 2rem;
-    }
-
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .column {
-        flex: 100%;
-        /* Each box takes full width */
-        min-width: 100%;
-        /* Override the min-width for mobile */
-    }
-
-    /* Restore desktop sizes for specific elements */
-    #text_1_1 {
-        font-size: 4.5rem;
-    }
-
-    #text_1_2 {
-        font-size: 1.35rem;
-    }
-
-    #text_2_1 {
-        font-size: 1.7rem;
-    }
-
-    .question {
-        font-size: 2.5rem;
-    }
-
-    .answer {
-        font-size: 1.5rem;
-    }
-
-    .form_button {
-        padding: 35px 50px;
-        font-size: 1.1rem;
-    }
-
-    /* Restore two-column layout for desktop */
-    .two-column {
-        flex-direction: row;
-    }
-
-    .column1,
-    .column2 {
-        min-width: 300px;
-        flex: 5 3;
-    }
 }
