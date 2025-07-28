@@ -120,6 +120,43 @@ h3 {
         min-width: 100%;
         /* Override the min-width for mobile */
     }
+
+    /* Restore desktop sizes for specific elements */
+    #text_1_1 {
+        font-size: 4.5rem;
+    }
+
+    #text_1_2 {
+        font-size: 1.1rem;
+    }
+
+    #text_2_1 {
+        font-size: 2rem;
+    }
+
+    .question {
+        font-size: 2.5rem;
+    }
+
+    .answer {
+        font-size: 1.8rem;
+    }
+
+    .form_button {
+        padding: 35px 50px;
+        font-size: 1.1rem;
+    }
+
+    /* Restore two-column layout for desktop */
+    .two-column {
+        flex-direction: row;
+    }
+
+    .column1,
+    .column2 {
+        min-width: 300px;
+        flex: 5 3;
+    }
 }
 
 
@@ -165,7 +202,7 @@ h3 {
 }
 
 #text_1_1 {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     margin: 0;
     /* Remove default margins that might affect alignment */
@@ -187,7 +224,7 @@ h3 {
     padding-top: 3rem;
     max-width: 850px;
     font-family: Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
     /* Remove default margins that might affect alignment */
@@ -202,7 +239,7 @@ h3 {
 
 .separator_container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .separator {
@@ -229,7 +266,7 @@ h3 {
     font-family: "Instrument Serif", serif;
     font-weight: 800;
     font-style: bold;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -238,7 +275,7 @@ h3 {
     margin-top: 0;
     font-family: Arial, sans-serif;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--text-color);
 }
 
