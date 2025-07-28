@@ -1,0 +1,447 @@
+/* ===== Base Styles (Mobile-First) ===== */
+:root {
+    --primary-color: #f06b2c;
+    /* Base orange */
+    --dark-color: #7a3619;
+    /* Darker shade (70% darker) */
+    --light-color: #fde0d4;
+    /* Light tint (10% of base) */
+    --text-color: #201511;
+    /* Default text */
+    --text-light: #fff;
+    /* Text on dark backgrounds */
+
+    --text-base: 1rem;
+    /* 16px (body text) */
+    --text-sm: 0.875rem;
+    /* 14px (small text) */
+    --text-lg: 1.125rem;
+    /* 18px (lead text) */
+    --heading-3: 1.25rem;
+    /* 20px */
+    --heading-2: 1.5rem;
+    /* 24px */
+    --heading-1: 2rem;
+}
+
+* {
+    background-color: var(--primary-color);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Layout ===== */
+
+body,
+header,
+main,
+footer,
+section {
+    padding: 0.5rem;
+}
+
+header {
+    text-align: left;
+    padding-bottom: 4rem;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+}
+
+/* ===== Navigation (No JS) ===== */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== Responsive Grid ===== */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+/* ===== Typography ===== */
+/* Headers */
+
+h1 {
+    font-size: var(--heading-1);
+}
+
+h2 {
+    font-size: var(--heading-2);
+}
+
+h3 {
+    font-size: var(--heading-3);
+}
+
+
+/* ===== Media Queries (Desktop) ===== */
+@media (min-width: 768px) {
+    :root {
+        --text-base: 1.125rem;
+        /* 18px */
+        --heading-3: 1.5rem;
+        /* 24px */
+        --heading-2: 2rem;
+        /* 32px */
+        --heading-1: 2.5rem;
+        /* 40px */
+    }
+
+    section {
+        padding: 1rem 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column {
+        flex: 100%;
+        /* Each box takes full width */
+        min-width: 100%;
+        /* Override the min-width for mobile */
+    }
+}
+
+
+/* ===== Header ===== */
+
+#site-title {
+    /* Custom font (if loaded) */
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+    line-height: 1.05;
+    color: var(--text-color);
+    /* Inherits color from parent */
+}
+
+/* ===== Two Column Layout ===== */
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    /* This ensures columns start at the same top position */
+}
+
+.column1 {
+    flex: 5;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* This vertically centers the content */
+    height: 100%;
+    /* Takes full height of its container */
+}
+
+.column2 {
+    flex: 3;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#text_1_1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin: 0;
+    /* Remove default margins that might affect alignment */
+    line-height: 1.1;
+    /* Tighter line height for large text */
+}
+
+#text_1_2 {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    /* Remove default margins that might affect alignment */
+    line-height: 1.5;
+    /* Standard line height for readability */
+}
+
+#text_2_1 {
+    padding-top: 3rem;
+    max-width: 850px;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+    /* Remove default margins that might affect alignment */
+    line-height: 1.5;
+    /* Standard line height for readability */
+}
+
+#about {
+    margin-bottom: 3rem;
+}
+
+
+.separator_container {
+    display: flex;
+    justify-content: center; 
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    margin-right: 6rem;
+    margin-left: 6rem;
+    max-width: 1000px;
+    width: 70%;
+}
+
+#common_qa {
+    text-align: center;
+    max-width: 800px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.question {
+    font-family: "Instrument Serif", serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.answer {
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    /* Adjust spacing as needed */
+}
+
+.form_button {
+    display: inline-block;
+    padding: 35px 50px;
+    background-color: var(--text-color);
+    /* Black background */
+    color: var(--primary-color);
+    /* White text */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid var(--text-color);
+    /* Black border */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Hover effect */
+.form_button:hover {
+    background-color: transparent;
+    color: var(--text-color);
+    /* Black text on hover */
+}
+
+/* Active/click effect */
+.form_button:active {
+    transform: translateY(1px);
+}
+
+
+
+/* ===== Tinted images ===== */
+.image-container {
+    position: relative;
+    display: inline-block;
+    background-color: var(--primary-color);
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 1.5rem;
+    /* Your orange color */
+}
+
+.tinted-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%) contrast(120%);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    background-color: var(--primary-color);
+    /* Same orange as container */
+    pointer-events: none;
+    /* Allows clicks to pass through to image */
+}
+
+
+/* ===== Fonts ===== */
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.instrument-serif-bold {
+    font-family: "Instrument Serif", serif;
+    font-weight: 1600;
+    font-style: bold;
+}
+
+.instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
